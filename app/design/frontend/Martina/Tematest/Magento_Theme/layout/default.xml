@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">header links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer">
+
+               <!-- 
+                <container name="footer-checkbox" htmlTag="div" htmlClass="container block">
+                    <block class="Magento\Framework\View\Element\Template" name="privacy-block" template="Magento_Newsletter::privacy-block.phtml" />
+                </container>
+                 -->
+
+            <container name="footer-vuoto" htmlTag="div" htmlClass="container block">
+                <block class="Magento\Framework\View\Element\Template" name="blocco-empty" template="Magento_Theme::blocco-empty.phtml" />
+            </container>
+
+            <container name="footer-wrap" htmlTag="div" htmlClass="container block">
+                <block class="Magento\Framework\View\Element\Template" name="blocco-img" template="Magento_Theme::blocco-img.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="blocco-txt" template="Magento_Theme::blocco-txt.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="blocco-link" template="Magento_Theme::blocco-link.phtml"/>
+            </container>
+
+            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
+        
+        </referenceContainer>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <move element="copyright" destination="before.body.end"/>
+        
+    </body>
+</page>
