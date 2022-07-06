@@ -1,28 +1,15 @@
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
- var config = {
-     //path contiene le librerie
-    paths: {
-        'glide': 'js/glide.min'
-        
-    }, //ordine
-    shim:{
-        'glide': {
-            deps: ['jquery']
-        },
-        
-        bootstrap: {
-            deps: ['jquery', '@popperjs/core']
-        }
-    },
+var config = {
     map: {
         '*': {
-            bootstrap: 'js/bootstrap.min',
-            '@popperjs/core': 'js/popper.min',
-            'glide' : 'js/glide.min',
+            custom: 'Magento_Sales/js/custom',
+        },
+        'Magento_Sales/js/custom': {
+            select2: 'js/select2.min'
+        }
+    },
+    shim: {
+        select2: {
+            deps: ['jquery']
         }
     }
 };

@@ -6,11 +6,11 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <!--<head>
-    <css src="css/bootstrap.css" />
-    </head>
-
-     <body>
+    <head>
+		<css src="css/select2.min.css" />
+        <css src="css/bootstrap.css" />
+    <!--
+    <body>
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
                 <arguments>
@@ -21,11 +21,11 @@
 
         <referenceContainer name="footer">
 
-               COMMENTO
+               
                 <container name="footer-checkbox" htmlTag="div" htmlClass="container block">
                     <block class="Magento\Framework\View\Element\Template" name="privacy-block" template="Magento_Newsletter::privacy-block.phtml" />
                 </container>
-                FINE COMMENTO
+              
 
             <container name="footer-vuoto" htmlTag="div" htmlClass="container block">
                 <block class="Magento\Framework\View\Element\Template" name="blocco-empty" template="Magento_Theme::blocco-empty.phtml" />
@@ -36,7 +36,7 @@
         </referenceContainer>
         <referenceBlock name="report.bugs" remove="true"/>
         <move element="copyright" destination="before.body.end"/>
-        
-    </body>
-    -->
+
+        </body>-->
+    </head>
 </page>
