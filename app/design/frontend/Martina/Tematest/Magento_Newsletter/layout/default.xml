@@ -12,12 +12,10 @@
         <referenceBlock name="head.components">
             <block class="Magento\Framework\View\Element\Js\Components" name="newsletter_head_components" template="Magento_Newsletter::js/components.phtml" ifconfig="newsletter/general/active"/>
         </referenceBlock>
-
+    
         <referenceContainer name="footer">
             <block class="Magento\Framework\View\Element\Template" name="form.subscribe.privacy" after="form.subscribe" template="Magento_Newsletter::privacy-block.phtml"/>
         </referenceContainer>
     -->
     </body>
 </page>
-
-
