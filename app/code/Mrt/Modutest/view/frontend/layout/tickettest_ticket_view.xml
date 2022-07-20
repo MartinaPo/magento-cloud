@@ -3,9 +3,7 @@
 
 <body>
         <referenceContainer name="main.content">
-			<!--<block class="Magento\Framework\View\Element\Template" name="layoutest" template="Mrt_Modutest::layoutest.phtml"/>-->
-			<!--<block class="Magento\Framework\View\Element\Template" name="provako" template="Mrt_Modutest::provako.phtml"/>-->
+            <block class="Magento\Framework\View\Element\Template" name="ticketing" template="Mrt_Modutest::tabella-ticket.phtml"/>
 		</referenceContainer>
 	</body>
 </page>
-
