@@ -1,0 +1,23 @@
+<p>nuovo test componente</p>
+<li repeat="foreach: lista, item: 'task'">
+    <span translate="task().id"></span>
+    <span translate="task().label"></span>
+    <!-- <span translate="task().status"></span> -->
+    <span>
+        <a data-bind="
+                attr: {
+                    class: 'status-ticket-' + (task().status ? 'complete' : 'open' )},
+                    click: prova"
+                    >Link
+        </a>
+        <!-- <a data-bind="
+                attr: {
+                
+                    class: 'status-ticket ' + (task().status ? 'complete' : 'open' ),
+                    'data-id': task().id
+                },
+                    click: cambiaStatus"
+                    >Link
+        </a> -->
+    </span>
+</li>
