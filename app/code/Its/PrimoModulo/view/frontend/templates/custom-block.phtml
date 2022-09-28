@@ -1,0 +1,47 @@
+<p>Testing blocks.</p>
+
+<?php
+echo $block->printString() . "<br />";
+echo $block->getCustomerName() . "<br />";
+?>
+
+<hr>
+
+<?php
+if ($block->checkCustomer()) {
+    $customerFirstname = $block->checkCustomer()->getFirstname();
+    $customerLastname = $block->checkCustomer()->getLastname();
+    $customerEmail = $block->checkCustomer()->getEmail();
+    echo "<h3>Hello, " . $customerFirstname . "</h3>" . "<br />";
+    echo "First Name: " . "<strong>" . $customerFirstname . "</strong><br />";
+    echo "Last Name: " . "<strong>" . $customerLastname . "</strong><br />";
+    echo "Email: " . "<strong>" . $customerEmail . "</strong><br />";
+    echo "<a class= \"header_account_link\" href=\"" . $block->getUrl("customer/account/") . "\">My Account</a>";
+} else {
+    echo "<h3>You are not logged in</h3>" . "<br />";
+    echo "<a class=\"header_account_link\" href=\"" . $block->getUrl("customer/account/login") . "\">Sign in</a>";
+    echo " or ";
+    echo "<a class=\"header_account_link\" href=\"" . $block->getUrl("customer/account/create") . "\">create an Account</a>";
+};
+?>
+
+<hr>
+
+<h3>Product</h3>
+
+<?php
+    $id = 1;
+    $product=$this->getLoadProduct($id);
+
+    echo $product->getName() . "<br />";
+    echo $product->getPrice() . "<br />";
+
+    $cat = $product->getCategoryIds($id);
+
+
+    echo "<br />";
+
+    $imgUrl = $this->getProductImage($id) . "<br />";
+    echo $imgUrl;
+    echo "<img src=\"" . $imgUrl . "\"/>";
+?>

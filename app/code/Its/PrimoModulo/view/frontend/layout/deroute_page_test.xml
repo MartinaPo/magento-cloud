@@ -2,7 +2,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content.top">
-            <block class="Magento\Framework\View\Element\Template" name="database_index_index" template="Nmdl_Ticketing::index.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="its" template="Its_PrimoModulo::its.phtml"/>
+            <block class="Its\PrimoModulo\Block\Custom" name="custom-block" template="Its_PrimoModulo::custom-block.phtml"/>
         </referenceContainer>
     </body>
 </page>

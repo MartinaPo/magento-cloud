@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content.top">
-            <block class="Magento\Framework\View\Element\Template" name="database_index_index" template="Nmdl_Ticketing::index.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="form-test" template="Its_PrimoModulo::form-test.phtml"/>
         </referenceContainer>
     </body>
 </page>

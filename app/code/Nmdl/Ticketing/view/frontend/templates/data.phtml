@@ -3,20 +3,20 @@
 ?>
 <div id="custom-form">
    <form class="contact custom" 
-         action="<?php echo $this->getUrl('database/index/index', ['_secure' => true]);?>"
+         action="<?php echo $this->getUrl('database/index/test', ['_secure' => true]);?>"
          id="custom-form"
          method="post"
          data-hasrequired="<?php  echo __('* Required Fields') ?>"
          data-mage-init='{"validation":{}}'>
  
-       <input type="hidden" name="editId" id="editId" value="<?= $collection['id']; ?>" />
+       <input type="hidden" name="editId" id="editId" value="<?= $collection['post_id']; ?>" />
  
         <fieldset class="fieldset">
             <legend class="legend"><span><?php  echo __("Contact") ?></span></legend><br />
             <div class="field name required">
                 <label class="label" for="name"><span><?php  echo __('Name') ?></span></label>
                 <div class="control">
-                    <input name="name" id="name" title="<?php  echo __('Name') ?>" value="<?= $collection['value_id']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
+                    <input name="name" id="name" title="<?php  echo __('Name') ?>" value="<?= $collection['post_id']; ?>" class="input-text" type="text" data-validate="{required:true}"/>
                 </div>
             </div>
             

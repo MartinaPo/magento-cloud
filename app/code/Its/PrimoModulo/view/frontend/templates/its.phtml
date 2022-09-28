@@ -1,0 +1,25 @@
+<p>prova</p>
+
+<?php
+$data = $block->getData('names');
+echo $data;
+?>
+
+<div data-bind="scope: 'its'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app": {
+                "components" : {
+                    "its": {
+                        "component": "Its_PrimoModulo/js/view/testcomp",
+                        "template": "Its_PrimoModulo/koTemplateJS"
+                    }
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,69 @@
+<?php
+    $data = $block->getData('tickets');
+?>
+
+<h1>Ticket test</h1>
+
+<table id="ticket-table" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Email</th>
+            <th>Testo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <?php
+            foreach ($data as $ticket) {
+                call_user_func_array('createRow', $ticket);
+            }
+            ?>
+        </tr>
+    </tbody>
+</table>
+
+<a href="ReadTicket">Show Link ID</a>
+
+<!-- Inizio Knockout -->
+<div data-bind="scope: 'its'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app": {
+                "components" : {
+                    "its": {
+                        "component": "Its_Ticketing/js/view/testcomp",
+                        "template": "Its_Ticketing/koTemplate",
+                        "tickets": [
+                            {"fName": "Marcello"},
+                            {"fName": "David"},
+                            {"fName": "Mark"}
+                        ]
+                    }
+                }
+            }
+        }
+    }
+</script>
+<!-- Fine Knockout -->
+
+<?php
+
+function createRow($fName, $lName, $email, $message = "")
+{
+    print '<tr>' . PHP_EOL;
+    // print '<td>' . $id . '</td>' . PHP_EOL;
+    print '<td>' . $fName . '</td>' . PHP_EOL;
+    print '<td>' . $lName . '</td>' . PHP_EOL;
+    print '<td>' . $email . '</td>' . PHP_EOL;
+    print '<td>' . $message . '</td>' . PHP_EOL;
+    print '<td>' . $message . '</td>' . PHP_EOL;
+    print '</tr>';
+}
+
+?>

@@ -2,7 +2,7 @@
 use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
-	ComponentRegistrar::MODULE,
-	'Its_PrimoModulo',
-	__DIR__
+    ComponentRegistrar::MODULE,
+    'Its_Ticketing',
+    __DIR__
 );

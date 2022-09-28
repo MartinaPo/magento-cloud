@@ -1,17 +1,13 @@
-<table>
-    <tr>
-        <th><?= __('value_id'); ?></th>
-        
-    </tr>
+<h1>Testing Update Database</h1>
+
+<?php
+    echo "Dati controller:";
+    $data = $block->getData('test');
+?>
+
+<p>
     <?php
-       // $collectionData = $controller->getData();
-       // foreach($collectionData as $collection):
+        echo "Dati controller:" . "<br />" . PHP_EOL;
+        echo $data['post_id'];
     ?>
-    <tr>
-        <td><?php 
-        // $collection->getData(); ?></td>
-    
-       
-    </tr>
-    <?php // endforeach; ?>
-</table>
+</p>

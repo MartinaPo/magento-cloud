@@ -1,0 +1,23 @@
+<h2>Test Form</h2>
+
+<form id="test-form" enctype="multipart/form-data" action="<?php echo $this->getUrl() . 'formtest/forms/rabbitform'; ?>" method="post">
+    <?php echo $this->getBlockHtml('formkey')?>
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname">
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email">
+    <label for="email">Message:</label>
+    <input type="text" name="message" id="message">
+    <input type="submit" value="Invia">
+</form>
+
+<hr>
+
+<?php
+$fname = $block->getData('fname');
+$data = $block->getData('data');
+// echo $test;
+print_r($data);
+?>

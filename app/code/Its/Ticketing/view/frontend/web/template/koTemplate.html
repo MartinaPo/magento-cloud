@@ -1,0 +1,12 @@
+<p>Knockout JS</p>
+
+<li repeat="foreach: tickets, item: 'ticket'">
+    <a data-bind="
+    attr: {
+        class: 'status-ticket-' + (ticket().status ? 'complete' : 'open' ),
+        'data-id': ticket().id
+    },
+    click: prova
+    ">Link</a>
+    <span translate="ticket().id"></span>
+</li>

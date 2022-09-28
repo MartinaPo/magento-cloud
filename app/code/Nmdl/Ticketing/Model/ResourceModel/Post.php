@@ -14,7 +14,7 @@ class Post extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 	
 	protected function _construct()
 	{
-		$this->_init('nmdl_ticketing_index', 'value_id');
+		$this->_init('nmdl_ticketing_index', 'post_id');
 	}
 	
 }

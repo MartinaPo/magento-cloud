@@ -7,11 +7,14 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
-        <route id="deroute" frontName="deroute">
-            <module name="Its_PrimoModulo" />
+        <route id="ticketing" frontName="ticketing">
+            <module name="Its_Ticketing" />
         </route>
-        <route id="formtest" frontName="formtest">
-            <module name="Its_PrimoModulo" />
+        <route id="ticketid" frontName="ticketid">
+            <module name="Its_Ticketing" />
+        </route>
+        <route id="newtest" frontName="newtest">
+            <module name="Its_Ticketing" />
         </route>
     </router>
 </config>
